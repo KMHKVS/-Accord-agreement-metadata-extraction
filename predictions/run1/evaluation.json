@@ -1,0 +1,94 @@
+{
+  "documents": 4,
+  "metrics": {
+    "Aggrement Value": {
+      "exact_matches": 4,
+      "labelled_values": 4,
+      "recall": 1.0,
+      "whitespace_trimmed_recall": 1.0
+    },
+    "Aggrement Start Date": {
+      "exact_matches": 4,
+      "labelled_values": 4,
+      "recall": 1.0,
+      "whitespace_trimmed_recall": 1.0
+    },
+    "Aggrement End Date": {
+      "exact_matches": 4,
+      "labelled_values": 4,
+      "recall": 1.0,
+      "whitespace_trimmed_recall": 1.0
+    },
+    "Renewal Notice (Days)": {
+      "exact_matches": 3,
+      "labelled_values": 4,
+      "recall": 0.75,
+      "whitespace_trimmed_recall": 0.75
+    },
+    "Party One": {
+      "exact_matches": 0,
+      "labelled_values": 4,
+      "recall": 0.0,
+      "whitespace_trimmed_recall": 1.0
+    },
+    "Party Two": {
+      "exact_matches": 1,
+      "labelled_values": 4,
+      "recall": 0.25,
+      "whitespace_trimmed_recall": 0.5
+    }
+  },
+  "missing_predictions": [],
+  "extra_predictions": [],
+  "mismatches": [
+    {
+      "file": "228094620-Rental-Agreement",
+      "field": "Renewal Notice (Days)",
+      "expected": "30",
+      "predicted": ""
+    },
+    {
+      "file": "24158401-Rental-Agreement",
+      "field": "Party One",
+      "expected": "Hanumaiah ",
+      "predicted": "Hanumaiah"
+    },
+    {
+      "file": "95980236-Rental-Agreement",
+      "field": "Party One",
+      "expected": " S.Sakunthala",
+      "predicted": "S.Sakunthala"
+    },
+    {
+      "file": "156155545-Rental-Agreement-Kns-Home",
+      "field": "Party One",
+      "expected": "V.K.NATARAJ ",
+      "predicted": "V.K.NATARAJ"
+    },
+    {
+      "file": "228094620-Rental-Agreement",
+      "field": "Party One",
+      "expected": " KAPIL MEHROTRA ",
+      "predicted": "KAPIL MEHROTRA"
+    },
+    {
+      "file": "24158401-Rental-Agreement",
+      "field": "Party Two",
+      "expected": " Vishal Bhardwaj ",
+      "predicted": "Vishal Bhardwaj"
+    },
+    {
+      "file": "156155545-Rental-Agreement-Kns-Home",
+      "field": "Party Two",
+      "expected": " VYSHNAVI DAIRY SPECIALITIES Private Ltd",
+      "predicted": "SRI VYSHNAVI DAIRY SPECIALITIES Private Ltd."
+    },
+    {
+      "file": "228094620-Rental-Agreement",
+      "field": "Party Two",
+      "expected": ".B.Kishore ",
+      "predicted": "B.Kishore"
+    }
+  ],
+  "policy": "Primary metric is literal exact-match recall. Blank ground truth is excluded per field. Missing predictions count as failures. Trimmed scores are supplementary only."
+}
