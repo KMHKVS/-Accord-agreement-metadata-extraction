@@ -1,0 +1,210 @@
+{
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "documents": [
+    {
+      "filename": "156155545-Rental-Agreement-Kns-Home.pdf.docx",
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "result": {
+        "document_type": "Rental Agreement",
+        "summary": "A lease agreement for a residential property in Chennai between V.K. Nataraj and Sri Vyshnavi Dairy Specialities Pvt. Ltd. for a period of 11 months with a monthly rent of Rs. 12,000.",
+        "currency": "INR",
+        "agreement_value": {
+          "value": "12000",
+          "status": "found",
+          "evidence": "The lessee agrees to pay a rent of Rs.12, OOO (Rupees Twelve Thousand only)",
+          "explanation": "The document explicitly states the monthly rent amount."
+        },
+        "agreement_start_date": {
+          "value": "15.12.2012",
+          "status": "found",
+          "evidence": "made on this day the 15th of December 2012",
+          "explanation": "The date of the deed is stated as the commencement date."
+        },
+        "agreement_end_date": {
+          "value": "14.11.2013",
+          "status": "inferred",
+          "evidence": "The Lease shall be for a period of ll(eleven) months from the date of this agreement",
+          "explanation": "Calculated by adding 11 months to the start date (15.12.2012), ending on the day before the anniversary (14.11.2013)."
+        },
+        "renewal_notice_days": {
+          "value": "30",
+          "status": "inferred",
+          "evidence": "The Lessor and the Lessee agree to give one month notice for terminating the lease on either side.",
+          "explanation": "No specific renewal notice is stated; the 1-month termination notice is used as a fallback, converted to 30 days."
+        },
+        "party_one": {
+          "value": "V.K.NATARAJ",
+          "status": "found",
+          "evidence": "V.K.NATARAJ , son of V.KANDASWAMI CHETTIAR",
+          "explanation": "The Lessor is identified as V.K. Nataraj, with relationship and address details omitted."
+        },
+        "party_two": {
+          "value": "SRI VYSHNAVI DAIRY SPECIALITIES Private Ltd.",
+          "status": "found",
+          "evidence": "SRI VYSHNAVI DAIRY SPECIALITIES Private Ltd., a company registered under the companies Act 1956",
+          "explanation": "The Lessee is the company, with the signatory's name and details omitted."
+        },
+        "warnings": [
+          "The rent amount in the text 'Rs.12, OOO' contains a typo (letter O instead of zero), interpreted as 12,000 based on the written-out amount.",
+          "The end date is inferred from the stated duration of 11 months."
+        ]
+      }
+    },
+    {
+      "filename": "228094620-Rental-Agreement.pdf.docx",
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "result": {
+        "document_type": "Rental Agreement",
+        "summary": "A residential rental agreement for an apartment in Hyderabad between an owner and a tenant for an 11-month term starting July 2013.",
+        "currency": "INR",
+        "agreement_value": {
+          "value": "15000",
+          "status": "found",
+          "evidence": "monthly rent of Rs. 15,000.00",
+          "explanation": "The document explicitly states the monthly rent amount."
+        },
+        "agreement_start_date": {
+          "value": "07.07.2013",
+          "status": "found",
+          "evidence": "with effect from 7st July, 2013",
+          "explanation": "The agreement specifies the commencement date as July 7, 2013, correcting the typo '7st'."
+        },
+        "agreement_end_date": {
+          "value": "06.06.2014",
+          "status": "found",
+          "evidence": "to 6th June, 2014",
+          "explanation": "The agreement explicitly states the end date as June 6, 2014."
+        },
+        "renewal_notice_days": {
+          "value": null,
+          "status": "missing",
+          "evidence": null,
+          "explanation": "The document mentions renewal by mutual consent but does not specify a notice period in days."
+        },
+        "party_one": {
+          "value": "KAPIL MEHROTRA",
+          "status": "found",
+          "evidence": "Mr. KAPIL MEHROTRA",
+          "explanation": "Identified as the Owner (First Party), with honorifics and address details removed."
+        },
+        "party_two": {
+          "value": "B.Kishore",
+          "status": "found",
+          "evidence": "Mr.B.Kishore",
+          "explanation": "Identified as the Tenant (Second Party), with honorifics, relationship clauses, and address details removed."
+        },
+        "warnings": [
+          "The document contains a conditional clause requiring the tenant to vacate if their marital status changes, which is unusual and potentially legally ambiguous.",
+          "The start date is written as '7st July' which is a typo for '7th July'."
+        ]
+      }
+    },
+    {
+      "filename": "24158401-Rental-Agreement.png",
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "result": {
+        "document_type": "Rental Agreement",
+        "summary": "A residential rental agreement for a period of 12 months starting April 1, 2008, with a monthly rent of Rs 12,000 and a security deposit of Rs 80,000.",
+        "currency": "INR",
+        "agreement_value": {
+          "value": "12000",
+          "status": "found",
+          "evidence": "monthly rent of Rs 12000",
+          "explanation": "Explicitly stated as the monthly rent in Clause 1."
+        },
+        "agreement_start_date": {
+          "value": "01.04.2008",
+          "status": "found",
+          "evidence": "This lease is effective from 1st April 2008",
+          "explanation": "Explicitly stated as the effective date in Clause 1."
+        },
+        "agreement_end_date": {
+          "value": "31.03.2009",
+          "status": "found",
+          "evidence": "up to end of March 2009",
+          "explanation": "Explicitly stated in Clause 4 as the end of the 12-month period."
+        },
+        "renewal_notice_days": {
+          "value": "60",
+          "status": "inferred",
+          "evidence": "vacate the premises on a two months notice",
+          "explanation": "Clause 8 specifies a two-month notice for vacating; converted to 60 days using a 30-day month convention as a fallback for termination notice."
+        },
+        "party_one": {
+          "value": "Hanumaiah",
+          "status": "found",
+          "evidence": "Sri Hanumaiah",
+          "explanation": "Identified as the Owner/Lessor; honorific 'Sri' omitted."
+        },
+        "party_two": {
+          "value": "Vishal Bhardwaj",
+          "status": "found",
+          "evidence": "Sri Vishal Bhardwaj S/O Chamel Singh",
+          "explanation": "Identified as the Tenant/Lessee; honorific 'Sri' and relationship clause 'S/O Chamel Singh' omitted."
+        },
+        "warnings": [
+          "The document is an image-only source with some illegible sections (signatures/witnesses).",
+          "Renewal notice days are inferred from termination notice as no specific renewal notice period is stated.",
+          "This document was read in image batches and combined through model-generated transcription. Review names, numbers and evidence against the source."
+        ]
+      }
+    },
+    {
+      "filename": "95980236-Rental-Agreement.png",
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "result": {
+        "document_type": "Rental Agreement",
+        "summary": "A residential lease agreement for a flat in Bangalore between Mrs. S.Sakunthala and V.V.Ravi Kian for a duration of 11 months.",
+        "currency": "INR",
+        "agreement_value": {
+          "value": "9000",
+          "status": "uncertain",
+          "evidence": "Rs. 9,000/- (Nine thousand and two hundred rupees only)",
+          "explanation": "The numeric value (9,000) conflicts with the written text (Nine thousand and two hundred), creating ambiguity."
+        },
+        "agreement_start_date": {
+          "value": "01.04.2010",
+          "status": "uncertain",
+          "evidence": "commencing from 1st April 2010",
+          "explanation": "The start date (2010) is later than the execution date (2005), indicating a likely OCR or drafting error."
+        },
+        "agreement_end_date": {
+          "value": "31.03.2011",
+          "status": "inferred",
+          "evidence": "period of 11 (Eleven) months commencing from 1st April 2010",
+          "explanation": "Calculated as 11 months from the start date, assuming an inclusive end date convention."
+        },
+        "renewal_notice_days": {
+          "value": "30",
+          "status": "inferred",
+          "evidence": "one month notice in writing to terminate",
+          "explanation": "No explicit renewal notice is stated; using the 30-day termination notice as a fallback."
+        },
+        "party_one": {
+          "value": "S.Sakunthala",
+          "status": "found",
+          "evidence": "Mrs. S.Sakunthala",
+          "explanation": "The Lessor, with the honorific 'Mrs.' removed."
+        },
+        "party_two": {
+          "value": "V.V.Ravi Kian",
+          "status": "found",
+          "evidence": "V.V.Ravi Kian,,",
+          "explanation": "The Lessee, with the relationship clause 'S/o V.R.G.Sastry' removed."
+        },
+        "warnings": [
+          "The document execution date (2005) precedes the lease start date (2010).",
+          "The rent amount in words ('Nine thousand and two hundred') does not match the numeric value ('9,000').",
+          "The Lessee's name 'V.V.Ravi Kian' appears to be a typo for 'Kiran'.",
+          "This document was read in image batches and combined through model-generated transcription. Review names, numbers and evidence against the source."
+        ]
+      }
+    }
+  ],
+  "errors": []
+}
