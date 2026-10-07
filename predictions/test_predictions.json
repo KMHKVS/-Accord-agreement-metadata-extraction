@@ -1,0 +1,198 @@
+{
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "documents": [
+    {
+      "filename": "24158401-Rental-Agreement.pdf.docx",
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "result": {
+        "document_type": "Rental Agreement",
+        "summary": "A rental agreement between Hanumaiah and Vishal Bhardwaj with a monthly rent of Rs. 12,000 for a period from 01.04.2008 to 31.03.2009.",
+        "currency": "INR",
+        "agreement_value": {
+          "value": "12000",
+          "status": "found",
+          "evidence": "Monthly rent amount is Rs. 12,000.",
+          "explanation": "The agreement value is Rs. 12,000."
+        },
+        "agreement_start_date": {
+          "value": "01.04.2008",
+          "status": "found",
+          "evidence": "Agreement start date is 01.04.2008.",
+          "explanation": "The agreement starts on 01.04.2008."
+        },
+        "agreement_end_date": {
+          "value": "31.03.2009",
+          "status": "found",
+          "evidence": "Agreement end date is 31.03.2009.",
+          "explanation": "The agreement ends on 31.03.2009."
+        },
+        "renewal_notice_days": {
+          "value": "60",
+          "status": "found",
+          "evidence": "Notice period is 60 days.",
+          "explanation": "The agreement specifies a 60-day notice period."
+        },
+        "party_one": {
+          "value": "Hanumaiah",
+          "status": "found",
+          "evidence": "Hanumaiah",
+          "explanation": "Hanumaiah is the first contracting party."
+        },
+        "party_two": {
+          "value": "Vishal Bhardwaj",
+          "status": "found",
+          "evidence": "Vishal Bhardwaj",
+          "explanation": "Vishal Bhardwaj is the second contracting party."
+        },
+        "warnings": []
+      }
+    },
+    {
+      "filename": "95980236-Rental-Agreement.pdf.docx",
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "result": {
+        "document_type": "Rental Agreement",
+        "summary": "A rental agreement between S.Sakunthala and an unspecified second party with a monthly rent of Rs. 9,000 for a period from 01.04.2010 to 31.03.2011.",
+        "currency": "INR",
+        "agreement_value": {
+          "value": "9000",
+          "status": "found",
+          "evidence": "Monthly rent amount is Rs. 9,000.",
+          "explanation": "The agreement value is Rs. 9,000."
+        },
+        "agreement_start_date": {
+          "value": "01.04.2010",
+          "status": "found",
+          "evidence": "Agreement start date is 01.04.2010.",
+          "explanation": "The agreement starts on 01.04.2010."
+        },
+        "agreement_end_date": {
+          "value": "31.03.2011",
+          "status": "found",
+          "evidence": "Agreement end date is 31.03.2011.",
+          "explanation": "The agreement ends on 31.03.2011."
+        },
+        "renewal_notice_days": {
+          "value": "30",
+          "status": "found",
+          "evidence": "Notice period is 30 days.",
+          "explanation": "The agreement specifies a 30-day notice period."
+        },
+        "party_one": {
+          "value": "S.Sakunthala",
+          "status": "found",
+          "evidence": "S.Sakunthala",
+          "explanation": "S.Sakunthala is the first contracting party."
+        },
+        "party_two": {
+          "value": "",
+          "status": "not_found",
+          "evidence": "",
+          "explanation": "No second contracting party was provided in the supplied data."
+        },
+        "warnings": [
+          "The second contracting party is missing from the supplied data."
+        ]
+      }
+    },
+    {
+      "filename": "156155545-Rental-Agreement-Kns-Home.pdf.docx",
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "result": {
+        "document_type": "Rental Agreement",
+        "summary": "A rental agreement between V.K. Nataraj and VYSHNAVI DAIRY SPECIALITIES Private Ltd. with a monthly rent of Rs. 12,000 for a period from 15.12.2012 to 14.11.2013.",
+        "currency": "INR",
+        "agreement_value": {
+          "value": "12000",
+          "status": "found",
+          "evidence": "Monthly rent amount is Rs. 12,000.",
+          "explanation": "The agreement value is Rs. 12,000."
+        },
+        "agreement_start_date": {
+          "value": "15.12.2012",
+          "status": "found",
+          "evidence": "Agreement start date is 15.12.2012.",
+          "explanation": "The agreement starts on 15.12.2012."
+        },
+        "agreement_end_date": {
+          "value": "14.11.2013",
+          "status": "found",
+          "evidence": "Agreement end date is 14.11.2013.",
+          "explanation": "The agreement ends on 14.11.2013."
+        },
+        "renewal_notice_days": {
+          "value": "30",
+          "status": "found",
+          "evidence": "Notice period is 30 days.",
+          "explanation": "The agreement specifies a 30-day notice period."
+        },
+        "party_one": {
+          "value": "V.K.NATARAJ",
+          "status": "found",
+          "evidence": "V.K.NATARAJ",
+          "explanation": "V.K.NATARAJ is the first contracting party."
+        },
+        "party_two": {
+          "value": "VYSHNAVI DAIRY SPECIALITIES Private Ltd",
+          "status": "found",
+          "evidence": "VYSHNAVI DAIRY SPECIALITIES Private Ltd",
+          "explanation": "VYSHNAVI DAIRY SPECIALITIES Private Ltd is the second contracting party."
+        },
+        "warnings": []
+      }
+    },
+    {
+      "filename": "228094620-Rental-Agreement.pdf.docx",
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "result": {
+        "document_type": "Rental Agreement",
+        "summary": "A rental agreement between KAPIL MEHROTRA and B.Kishore with a monthly rent of Rs. 15,000. The agreement end date was not provided.",
+        "currency": "INR",
+        "agreement_value": {
+          "value": "15000",
+          "status": "found",
+          "evidence": "Monthly rent amount is Rs. 15,000.",
+          "explanation": "The agreement value is Rs. 15,000."
+        },
+        "agreement_start_date": {
+          "value": "07.07.2013",
+          "status": "found",
+          "evidence": "Agreement start date is 07.07.2013.",
+          "explanation": "The agreement starts on 07.07.2013."
+        },
+        "agreement_end_date": {
+          "value": "",
+          "status": "not_found",
+          "evidence": "",
+          "explanation": "No agreement end date was provided in the supplied data."
+        },
+        "renewal_notice_days": {
+          "value": "30",
+          "status": "found",
+          "evidence": "Notice period is 30 days.",
+          "explanation": "The agreement specifies a 30-day notice period."
+        },
+        "party_one": {
+          "value": "KAPIL MEHROTRA",
+          "status": "found",
+          "evidence": "KAPIL MEHROTRA",
+          "explanation": "KAPIL MEHROTRA is the first contracting party."
+        },
+        "party_two": {
+          "value": ".B.Kishore",
+          "status": "found",
+          "evidence": ".B.Kishore",
+          "explanation": ".B.Kishore is the second contracting party."
+        },
+        "warnings": [
+          "The agreement end date is missing from the supplied data."
+        ]
+      }
+    }
+  ]
+}
