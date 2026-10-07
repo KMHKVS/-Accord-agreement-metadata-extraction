@@ -16,6 +16,25 @@ Each field comes back with a **status** (`found`, `inferred`, `uncertain`, `miss
 It can be used as a **web UI**, a **REST API**, or a **batch CLI** for predictions and evaluation.
 
 ---
+Live Demo
+
+URL: https://accord-agreement-metadata-extraction.onrender.com (interactive API docs at /docs)
+
+A deployed copy of the web UI is hosted on Render for demonstration. Notes:
+
+Free hosting wakes slowly. After a period of inactivity the first request can take up to a minute.
+Scans take longer than .docx files. On the free Groq tier each image section is transcribed separately and a rate-limit hit waits 50 seconds, so a scanned agreement can take a few minutes. Wait for the result instead of reloading.
+Enter your own key if the server has none. If no server key is configured, open Settings and paste a Groq or OpenAI key. It is kept only in page memory and is cleared when you reload. Never share a key you want to keep private.
+No authentication or rate limiting. It is a demonstration deployment, not a production service.
+Deploying on Render
+Create a Web Service from the GitHub repository.
+Build command: pip install -r requirements.lock.txt
+Start command: python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
+Set the Python version to 3.12 or newer (for example with a PYTHON_VERSION environment variable).
+Optional: add AI_PROVIDER, GROQ_API_KEY and GROQ_MODEL as environment variables. Anyone who can open the URL can then use that key and its quota, so omit them if you do not want that.
+
+
+---
 
 ## Approach
 
