@@ -1,0 +1,16 @@
+Provider:        groq
+Model:           qwen/qwen3.8-27b
+Documents:       4 (data/test), failures: 0
+Settings:        zero-shot, temperature=0, image slices 2000 px with 100 px overlap
+
+Date of run:     2026-10-07
+Commit hash:     <output of: git rev-parse --short HEAD>
+Run by:          krishna
+Groq tier:       free
+
+Command:         python -m app.cli predict data/test --provider groq --output predictions/test_predictions.csv
+Evaluation:      python -m app.cli evaluate --predictions predictions/test_predictions.csv --labels data/test.csv --output evaluation.json
+
+Output files:    predictions/test_predictions.csv
+                 predictions/test_predictions.json
+                 evaluation.json
