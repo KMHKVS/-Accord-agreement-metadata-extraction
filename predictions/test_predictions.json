@@ -178,10 +178,10 @@
           "explanation": "The agreement specifies a 30-day notice period."
         },
         "party_one": {
-          "value": "KAPIL MEHROTRA",
-          "status": "found",
-          "evidence": "KAPIL MEHROTRA",
-          "explanation": "KAPIL MEHROTRA is the first contracting party."
+          "value": "",
+          "status": "not_found",
+          "evidence": "",
+          "explanation": "No fisrt contracting party was provided in the supplied data."
         },
         "party_two": {
           "value": ".B.Kishore",
