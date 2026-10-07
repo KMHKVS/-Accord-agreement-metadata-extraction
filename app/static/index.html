@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accord — Document workspace</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23724ce8'/%3E%3Cpath d='M11 28 20 10l9 18M15 22h10' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Accord home"><span class="brand-icon">a<span>·</span></span>accord<span class="brand-tag">DOCUMENT WORKSPACE</span></a>
+    <button class="settings-button" id="settings-open"><span class="status-dot" id="connection-dot"></span><span id="connection-label">Checking connection</span><span class="gear" aria-hidden="true">⚙</span></button>
+  </header>
+  <main>
+    <section class="intro">
+      <div><div class="eyebrow"><span></span> LESS READING. MORE CLARITY.</div><h1>Documents in. <span>Details out.</span></h1><p>Turn agreements into structured information, whatever the layout.</p></div>
+      <a class="api-link" href="/docs" target="_blank" rel="noopener">API reference <span aria-hidden="true">↗</span></a>
+    </section>
+    <section class="workspace" aria-label="Document extraction workspace">
+      <aside class="sidebar">
+        <div class="section-heading"><h2>Your documents <span id="file-count">0</span></h2><button id="clear-all" class="text-button" hidden>Clear</button></div>
+        <input id="file-input" type="file" multiple hidden>
+        <button class="dropzone" id="dropzone"><span class="upload-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 16V4m-4 4 4-4 4 4M5 15v5h14v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>Drop your files here</strong><span>or <b>browse files</b></span><small>PDF, Word, images & more · 20 MB each</small></button>
+        <div id="file-list" class="file-list" aria-label="Uploaded documents"></div>
+        <div id="queue-empty" class="queue-empty"><span class="tiny-sparkle">✧</span><p>A little less paperwork.<br>A lot more possibility.</p></div>
+        <div class="sidebar-bottom"><button id="extract-all" class="primary" disabled>Extract details <span aria-hidden="true">↗</span></button><p class="privacy-note">Extraction sends document content to <span id="privacy-provider">your selected provider</span>.<br> Uploads and results are not saved by this app.</p></div>
+      </aside>
+      <section class="detail-panel">
+        <div class="panel-header"><div class="panel-title"><span class="document-symbol" aria-hidden="true">▤</span><div><h2 id="active-title">A clearer view of every agreement</h2><p id="active-meta">Upload a document to get started</p></div></div><button id="export-button" class="secondary" disabled>↓ Export</button></div>
+        <div class="tabs" role="tablist" aria-label="Document views"><button id="tab-details" role="tab" aria-controls="view-details" aria-selected="true" data-tab="details">Extracted details</button><button id="tab-source" role="tab" aria-controls="view-source" aria-selected="false" data-tab="source" tabindex="-1">Source document</button><button id="tab-json" role="tab" aria-controls="view-json" aria-selected="false" data-tab="json" tabindex="-1">JSON</button><span id="result-status" class="result-status">6 fields to uncover</span></div>
+        <div id="notice" class="notice" role="status" hidden></div>
+        <div id="view-details" class="view" role="tabpanel" aria-labelledby="tab-details">
+          <div id="empty-state" class="empty-state"><div class="paper-stack"><div class="paper-back"></div><div class="paper-front"><span class="paper-label">AGREEMENT</span><i></i><i></i><div class="paper-highlight"><span></span><b>✓</b></div><i></i><i></i></div><span class="float-check">✓</span></div><h3>The important details,<br>without the search.</h3><p>Upload an agreement and let AI find the parties,<br>dates, value, and notice period for you.</p><div class="field-chips"><span>Agreement value</span><span>Key dates</span><span>Parties</span><span>Notice period</span></div></div>
+          <div id="results" hidden></div>
+        </div>
+        <div id="view-source" class="view source-view" role="tabpanel" aria-labelledby="tab-source" hidden><p class="placeholder">Upload a file to preview its contents.</p></div>
+        <div id="view-json" class="view json-view" role="tabpanel" aria-labelledby="tab-json" hidden><p class="placeholder">Extract a document to see its structured output.</p></div>
+        <div class="panel-footer"><span><span class="mini-dot"></span> Built for different formats. Made for the details.</span><span>AI extraction · Review before use</span></div>
+      </section>
+    </section>
+    <footer class="page-footer"><details><summary>Supported formats <span>+</span></summary><p id="formats-list">Loading supported formats…</p><p>Up to 30 pages or frames, 40 image sections, and 120,000 text characters per file. Legacy .doc, .xls and .ppt files should be exported to a modern Office format or PDF. Audio and video are not supported.</p></details><span>From unstructured to understood.</span></footer>
+  </main>
+  <dialog id="settings-dialog"><form id="settings-form"><div class="dialog-heading"><div><div class="eyebrow">EXTRACTION SETTINGS</div><h2>Connect your workspace</h2></div><button type="button" class="icon-button" id="settings-close" aria-label="Close settings">×</button></div><p>Choose the provider that issued your API key to extract details. You can preview documents without one.</p><label for="provider-input">Provider</label><select id="provider-input"><option value="groq">Groq</option><option value="openai">OpenAI</option></select><label for="api-key">API key</label><input id="api-key" type="password" placeholder="sk-…" autocomplete="off"><small id="key-help">Kept in this page’s memory only. Cleared when you reload.</small><label for="model-input">Model</label><input id="model-input" value="gpt-4.1-mini" required maxlength="100"><small id="model-help">Choose a model with image input and JSON output support.</small><div class="dialog-note">Document text and images are sent to the selected provider when you extract. This app does not save uploads, results, or your entered key to disk.</div><div class="dialog-actions"><button type="button" class="secondary" id="forget-key">Forget key</button><button class="primary" type="submit">Save settings</button></div></form></dialog>
+  <dialog id="export-dialog"><div class="dialog-heading"><h2>Export your results</h2><button class="icon-button" id="export-close" aria-label="Close export">×</button></div><p>Download extracted values as a spreadsheet, or include evidence and notes in JSON.</p><div class="export-options"><button class="secondary" id="export-csv">↓ All completed · CSV</button><button class="primary" id="export-json">↓ This document · JSON</button></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

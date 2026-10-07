@@ -1,0 +1,6 @@
+{
+  "name": "accord-browser-tests",
+  "private": true,
+  "scripts": {"test:ui": "node tests/browser-smoke.cjs"},
+  "devDependencies": {"playwright": "1.62.1"}
+}
