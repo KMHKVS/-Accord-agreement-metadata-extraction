@@ -164,8 +164,8 @@ function renderSource(item) {
 }
 async function extractBatch(items) {
   if (busy) return;
-  if (!apiKey && !config?.providers?.[provider]?.configured) { openSettings(); return; }
-  busy = true; render();
+  busy = true;
+  render();
   const keyForRun = apiKey, modelForRun = model, providerForRun = provider;
   try {
     for (const item of items) {
